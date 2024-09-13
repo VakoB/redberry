@@ -1,0 +1,478 @@
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "FiraGO";
+}
+
+body {
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: black;
+  cursor: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* header */
+
+header {
+  height: 100px;
+  align-content: center;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+header > img {
+  width: 150px;
+}
+
+header > a {
+  margin-inline: 167px;
+}
+
+/* index.html */
+
+main {
+  margin-top: 77px;
+  margin-inline: 167px;
+}
+
+.operations-bar {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  width: 785px;
+  gap: 24px;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 6px;
+}
+
+.filters > * {
+  display: flex;
+  position: relative;
+  height: Hug (35px) px;
+  padding: 8px 14px 8px 14px;
+  gap: 4px;
+  opacity: 0px;
+}
+
+.filters > * > p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+  color: #021526;
+}
+
+.operations {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.operations button {
+  border: none;
+  background-color: transparent;
+  font-family: FiraGO;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+}
+
+.operations a {
+  padding: 10px 16px 10px 16px;
+}
+
+.add-listing {
+  background-color: #f93b1d;
+  width: Hug (230px) px;
+  height: Fixed (47px) px;
+  gap: 2px;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.add-agent {
+  border: #f93b1d solid 1px;
+  border-radius: 10px;
+}
+
+.add-listing button {
+  color: white;
+}
+
+.add-agent button {
+  color: #f93b1d;
+}
+
+.real-estate-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 32px;
+  gap: 20px;
+}
+
+.real-estate-element {
+  position: relative;
+}
+
+.real-estate-element:hover {
+  cursor: pointer;
+}
+
+.real-estate-element:hover .real-estate-text {
+  box-shadow: 5px 5px 12px 0px #02152614;
+}
+
+.real-estate-element > img {
+  border-radius: 14px 14px 0 0;
+  height: 307px;
+  width: 100%;
+}
+
+.real-estate-text {
+  border-width: 0px 1px 1px 1px;
+  border-style: solid;
+  border-color: #dbdbdb;
+  border-radius: 0 0 14px 14px;
+  padding: 22px 25px 22px 25px;
+}
+
+.real-estate-text > h2 {
+  font-family: FiraGO;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 33.6px;
+  text-align: left;
+}
+
+.real-estate-location {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: #021526b2;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.real-estate-location > img {
+  width: 20px;
+}
+
+.real-estate-details {
+  display: flex;
+  gap: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  color: #021526b2;
+  margin-top: 20px;
+}
+
+.real-estate-details > * {
+  gap: 5px;
+  align-items: center;
+}
+
+.re-rooms {
+  display: flex;
+}
+
+.re-rooms > img {
+  width: 24px;
+}
+
+.re-area {
+  display: flex;
+  position: relative;
+}
+
+.re-area > img {
+  width: 18px;
+}
+
+.re-area span {
+  position: absolute;
+  left: 73px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
+  width: 5px;
+  height: 24px;
+}
+
+.re-zipcode {
+  display: flex;
+}
+
+.is-rental {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  width: 90px;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14.4px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 6px;
+  background-color: #02152680;
+  border-radius: 15px;
+  margin: 25px 0 25px 25px;
+}
+
+/* dropdown - region */
+
+.filters-dropdown {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 2;
+  background-color: white;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 5px 5px 12px 0px #02152614;
+  display: none;
+}
+
+.filters-dropdown-title {
+  font-size: 16px;
+}
+
+.region {
+  position: relative;
+}
+
+.drop-row {
+  display: flex;
+  gap: 8px;
+  width: 191px;
+}
+
+.dropdown {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  gap: 24px;
+}
+
+.drop-regions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 24px;
+}
+
+.dropdown-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.dropdown-button button {
+  background-color: #f93b1d;
+  gap: 2px;
+  border-radius: 10px 10px 10px 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  text-align: center;
+  color: white;
+  width: 77px;
+  height: 33px;
+}
+
+/* dropdown - price */
+
+.drop-price {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.drop-price-inputs {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.drop-price-inputs > * {
+  border: 1px solid #808a93;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+}
+
+.drop-price-inputs input {
+  border: none;
+}
+
+.drop-price-inputs input:focus {
+  outline: none;
+}
+
+.drop-price-ranges {
+  display: flex;
+}
+
+.drop-price-ranges > * {
+  width: 155px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-price-ranges > * > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.max-prices {
+  margin-left: 60px;
+}
+
+/* dropdown - area */
+
+.drop-area {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.drop-area-inputs {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.drop-area-inputs > * {
+  border: 1px solid #808a93;
+  border-radius: 6px;
+  padding: 10px;
+  display: flex;
+}
+
+.drop-area-inputs input {
+  border: none;
+}
+
+.drop-area-inputs input:focus {
+  outline: none;
+}
+
+.drop-area-ranges {
+  display: flex;
+}
+
+.drop-area-ranges > * {
+  width: 155px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-area-ranges > * > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.max-area {
+  margin-left: 60px;
+}
+
+.dropdown-contents span {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  width: 5px;
+  margin-left: 1.5px;
+  margin-bottom: 10px;
+}
+
+.drop-area-ranges > * > div > * {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  height: 19px;
+}
+
+.drop-area-inputs > * > p,
+.drop-area-ranges > * > p {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  height: 19px;
+}
+
+/* dropdown - rooms */
+
+.drop-rooms {
+  padding-right: 200px;
+  margin-top: 30px;
+}
+
+.drop-rooms > input {
+  border: 1px solid #808A93;
+  width: 41px;
+  height: 42px;
+  padding: 10px 0px 0px 0px;
+  gap: 0px;
+  border-radius: 6px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  padding: 10px;
+  text-align: center;
+}
+
+.drop-rooms > input:focus {
+  outline: none;
+}
+
+.dropdown-activator:hover {
+  cursor: pointer;
+  background-color: #F3F3F3;
+  border-radius: 6px;
+}
+
+/* filters shown */
+
+.filtered-content-container {
+  margin-top: 20px;
+}

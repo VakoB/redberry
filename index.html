@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img src="/assets/images/LOGO-02 3.svg" alt="Redberry logo" />
+      </a>
+    </header>
+    <main>
+      <div class="operations-bar">
+        <div class="filters">
+          <div class="dropdown-activator region">
+            <p>რეგიონი</p>
+            <img src="/assets/icons/Shape.svg" alt="arrow icon" />
+            <div class="filters-dropdown">
+              <div class="dropdown-contents">
+                <p class="filters-dropdown-title">რეგიონის მიხედვით</p>
+                <div class="dropdown drop-regions">
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-1"
+                      title="region-checkbox-1"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-1">ქართლი</label>
+                  </div>
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-2"
+                      title="region-checkbox-2"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-2">ქართლი</label>
+                  </div>
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-3"
+                      title="region-checkbox-3"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-3">ქართლი</label>
+                  </div>
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-4"
+                      title="region-checkbox-4"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-4">ქართლი</label>
+                  </div>
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-5"
+                      title="region-checkbox-5"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-5">ქართლი</label>
+                  </div>
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-6"
+                      title="region-checkbox-6"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-6">ქართლი</label>
+                  </div>
+
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-7"
+                      title="region-checkbox-7"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-7">ქართლი</label>
+                  </div>
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-8"
+                      title="region-checkbox-8"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-8">ქართლი</label>
+                  </div>
+                  <div class="drop-row">
+                    <input
+                      id="region-checkbox-9"
+                      title="region-checkbox-9"
+                      type="checkbox"
+                    />
+                    <label for="region-checkbox-9">ქართლი</label>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-button">
+                <button type="button">არჩევა</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-activator price">
+            <p>საფასო კატეგორია</p>
+            <img src="/assets/icons/Shape.svg" alt="arrow icon" />
+            <div class="filters-dropdown">
+              <div class="dropdown-contents">
+                <p class="filters-dropdown-title">ფასის მიხედვით</p>
+                <div class="dropdown drop-price">
+                  <div class="drop-price-inputs">
+                    <div class="price-from">
+                      <input placeholder="დან" type="number" />₾
+                    </div>
+                    <div class="price-to">
+                      <input placeholder="მდე" type="number" />₾
+                    </div>
+                  </div>
+                  <div class="drop-price-ranges">
+                    <div class="min-prices">
+                      <p>მინ. ფასი</p>
+                      <div>
+                        <p>50,000 ₾</p>
+                        <p>100,000 ₾</p>
+                        <p>150,000 ₾</p>
+                        <p>200,000 ₾</p>
+                        <p>300,000 ₾</p>
+                      </div>
+                    </div>
+                    <div class="max-prices">
+                      <p>მაქს. ფასი</p>
+                      <div>
+                        <p>50,000 ₾</p>
+                        <p>100,000 ₾</p>
+                        <p>150,000 ₾</p>
+                        <p>200,000 ₾</p>
+                        <p>300,000 ₾</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-button">
+                <button type="button">არჩევა</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-activator area">
+            <p>ფართობი</p>
+            <img src="/assets/icons/Shape.svg" alt="arrow icon" />
+            <div class="filters-dropdown">
+              <div class="dropdown-contents">
+                <p class="filters-dropdown-title">ფართობის მიხედვით</p>
+                <div class="dropdown drop-area">
+                  <div class="drop-area-inputs">
+                    <div class="area-from">
+                      <input placeholder="დან" type="number" />
+                      <p>მ<span>2</span></p>
+                    </div>
+                    <div class="area-to">
+                      <input placeholder="მდე" type="number" />
+                      <p>მ<span>2</span></p>
+                    </div>
+                  </div>
+                  <div class="drop-area-ranges">
+                    <div class="min-area">
+                      <p>მინ. მ<span>2</span></p>
+                      <div>
+                        <p>50.00 მ<span>2</span></p>
+                        <p>100.00 მ<span>2</span></p>
+                        <p>150.00 მ<span>2</span></p>
+                        <p>200.00 მ<span>2</span></p>
+                        <p>250.00 მ<span>2</span></p>
+                      </div>
+                    </div>
+                    <div class="max-area">
+                      <p>მაქს. მ<span>2</span></p>
+                      <div>
+                        <p>50.00 მ<span>2</span></p>
+                        <p>100.00 მ<span>2</span></p>
+                        <p>150.00 მ<span>2</span></p>
+                        <p>200.00 მ<span>2</span></p>
+                        <p>250.00 მ<span>2</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-button">
+                <button type="button">არჩევა</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown-activator rooms">
+            <p>საძინებლების რაოდენობა</p>
+            <img src="/assets/icons/Shape.svg" alt="arrow icon" />
+            <div class="filters-dropdown">
+              <div class="dropdown-contents">
+                <p class="filters-dropdown-title">საძინებლების რაოდენობა</p>
+                <div class="dropdown drop-rooms">
+                  <input placeholder="2" title="rooms" type="number" />
+                </div>
+              </div>
+              <div class="dropdown-button">
+                <button type="button">არჩევა</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="operations">
+          <a class="add-listing" href="#">
+            <img src="/assets/icons/plus-arrow-white.svg" alt="plus icon" />
+            <button title="">ლისტინგის დამატება</button>
+          </a>
+          <a class="add-agent" href="#">
+            <img src="/assets/icons/plus-arrow-orange.svg" alt="plus icon" />
+            <button title="">აგენტის დამატება</button>
+          </a>
+        </div>
+      </div>
+      <div class="filtered-content-container">
+        <div class="filtered-content"></div>
+        <div class="delete-filtered-content">გასუფთავება</div>
+      </div>
+
+      <div id="real-estate-container" class="real-estate-container">
+        <!-- <a href="#">
+          <div class="real-estate-element r-1">
+            <div class="is-rental">ქირავდება</div>
+            <img src="/assets/images/test2.png" alt="real estate picture" />
+            <div class="real-estate-text">
+              <h2>80 000 ₾</h2>
+              <div class="real-estate-location">
+                <img
+                  src="/assets/icons/location-icon.svg"
+                  alt="location icon"
+                />
+                <p>თბილისი, ი. ჭავჭავაძის 53</p>
+              </div>
+              <div class="real-estate-details">
+                <div class="re-rooms">
+                  <img src="/assets/icons/bed-icon.svg" alt="bed icon" />
+                  <p>2</p>
+                </div>
+                <div class="re-area">
+                  <img src="/assets/icons/area-icon.svg" alt="area icon" />
+                  <p>55 მ <span>2</span></p>
+                </div>
+                <div class="re-zipcode">
+                  <img
+                    src="/assets/icons/zipcode-icon.svg"
+                    alt="zipcode icon"
+                  />
+                  <p>0160</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a> -->
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/realestates.js"></script>
+  </body>
+</html>
