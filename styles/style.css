@@ -138,8 +138,17 @@ main {
 .real-estate-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-top: 32px;
   gap: 20px;
+}
+
+.no-content-shown {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  width: 504px;
+  margin-top: 25px;
+  color: #021526cc;
 }
 
 .real-estate-element {
@@ -259,7 +268,7 @@ main {
 
 .filters-dropdown {
   position: absolute;
-  left: 0;
+  left: -6px;
   top: 50px;
   z-index: 2;
   background-color: white;
@@ -278,10 +287,11 @@ main {
   position: relative;
 }
 
-.drop-row {
+.drop-element {
   display: flex;
   gap: 8px;
   width: 191px;
+  align-items: center;
 }
 
 .dropdown {
@@ -289,6 +299,7 @@ main {
   font-weight: 400;
   line-height: 16.8px;
   gap: 24px;
+  position: relative;
 }
 
 .drop-regions {
@@ -297,10 +308,19 @@ main {
   margin-top: 24px;
 }
 
+.drop-regions input:hover,
+.drop-regions label:hover {
+  cursor: pointer;
+}
+
 .dropdown-button {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
+}
+
+.dropdown-button button:hover {
+  cursor: pointer;
 }
 
 .dropdown-button button {
@@ -317,12 +337,31 @@ main {
   height: 33px;
 }
 
+.region-dropdown-check {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px #dbdbdb solid;
+}
+
+.region-dropdown-check:checked {
+  background: #45a849;
+  background-image: url("/assets/icons/tick-iconsvg.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 12px;
+  padding: 2px;
+}
+
 /* dropdown - price */
 
 .drop-price {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 34px;
 }
 
 .drop-price-inputs {
@@ -344,6 +383,24 @@ main {
 
 .drop-price-inputs input:focus {
   outline: none;
+}
+
+.error-message {
+  position: absolute;
+  top: 62px;
+  width: 194px;
+  height: 14px;
+  gap: 0px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.4px;
+  text-align: left;
+  color: #f93b1d;
+  display: none;
+}
+
+.border-red {
+  border: 1px solid #f93b1d !important;
 }
 
 .drop-price-ranges {
@@ -413,6 +470,16 @@ main {
   gap: 5px;
 }
 
+.min > div > p,
+.max > div > p {
+  border-radius: 15px;
+}
+
+.min > div > p:hover,
+.max > div > p:hover {
+  background-color: #f3f3f3;
+}
+
 .max-area {
   margin-left: 60px;
 }
@@ -449,7 +516,7 @@ main {
 }
 
 .drop-rooms > input {
-  border: 1px solid #808A93;
+  border: 1px solid #808a93;
   width: 41px;
   height: 42px;
   padding: 10px 0px 0px 0px;
@@ -467,12 +534,67 @@ main {
 
 .dropdown-activator:hover {
   cursor: pointer;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   border-radius: 6px;
 }
 
 /* filters shown */
 
-.filtered-content-container {
-  margin-top: 20px;
+.active-filters {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  align-items: center;
+  padding-right: 20px;
+  height: 30px;
+}
+
+.filtered-content {
+  display: flex;
+  gap: 8px;
+  padding: 6px 10px 6px 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 43px;
+}
+
+.delete-filtered-content {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+  text-align: left;
+}
+
+.delete-filtered-content:hover {
+  cursor: pointer;
+}
+
+.active-filters-add-remove {
+  margin-top: 17px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.filtered-content > * {
+  display: flex;
+  align-items: start;
+}
+
+.filter-remove:hover {
+  cursor: pointer;
+}
+
+.filtered-content span {
+  margin-left: 1px;
+}
+
+.filtered-content span {
+  width: 5px;
+  height: 12px;
+  gap: 0px;
+  opacity: 0px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: left;
 }
