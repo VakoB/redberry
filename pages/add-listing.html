@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      href="https://free.bboxtype.com/embedfonts/?family=FiraGO:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="/pages/add-listing.html">
+        <img src="/assets/images/LOGO-02 3.svg" alt="Redberry logo" />
+      </a>
+    </header>
+    <main>
+      <div class="al-title">
+        <h1>ლისტინგის დამატება</h1>
+      </div>
+      <div class="add-listing-form">
+        <div class="al-trade-type al-section">
+          <p>გარიგების ტიპი</p>
+          <div class="al-radio-buttons">
+            <div>
+              <input name="trading-type" id="rb-sell" type="radio" checked />
+              <label for="rb-sell">იყიდება</label>
+            </div>
+            <div>
+              <input name="trading-type" id="rb-rent" type="radio" />
+              <label for="rb-rent">ქირავდება</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- location section -->
+        <div class="al-location al-section">
+          <p>მდებარეობა</p>
+          <div class="al-location-info">
+            <!-- add listing location first row -->
+            <div class="al-inputs">
+              <div class="al-address">
+                <div class="al-input">
+                  <label for="al-address-input">მისამართი *</label>
+                  <input type="text" name="address" id="al-address-input" />
+                </div>
+                <div class="al-validation-message">
+                  <img
+                    src="/assets/icons/tick-black-icon.svg"
+                    alt="Black tick icon"
+                  />
+                  <p>მინიმუმ ორი სიმბოლო</p>
+                </div>
+              </div>
+
+              <div class="al-postal-index">
+                <div class="al-input">
+                  <label for="al-postal-index-input">საფოსტო ინდექსი *</label>
+                  <input
+                    type="text"
+                    name="postal-index"
+                    id="al-postal-index-input"
+                  />
+                </div>
+                <div class="al-validation-message">
+                  <img
+                    src="/assets/icons/tick-black-icon.svg"
+                    alt="Black tick icon"
+                  />
+                  <p>მხოლოდ რიცხვები</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- add listing location second row -->
+            <div class="al-dropdowns">
+              <div class="al-region">
+                <div class="al-dropdown">
+                  <p for="al-region-dropdown">რეგიონი</p>
+                  <div id="region-custom-select" class="custom-select">
+                    <div class="select-selected"></div>
+                    <div id="region-select-items" class="select-items">
+                      <!-- <div>Option 1</div>
+                      <div>Option 2</div>
+                      <div>Option 3</div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="al-city">
+                <div class="al-dropdown">
+                  <p for="al-city-dropdown">ქალაქი</p>
+                  <div id="city-custom-select" class="custom-select">
+                    <div class="select-selected"></div>
+                    <div id="city-select-items" class="select-items">
+                      <!-- <div>Option 1</div>
+                      <div>Option 2</div>
+                      <div>Option 3</div> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="al-details al-section">
+          <p>ბინის დეტალები</p>
+          <div class="al-details-info">
+            <div class="al-inputs">
+              <div class="al-price">
+                <div class="al-input">
+                  <label for="al-address-input">ფასი</label>
+                  <input type="text" name="address" id="al-address-input" />
+                </div>
+                <div class="al-validation-message">
+                  <img
+                    src="/assets/icons/tick-black-icon.svg"
+                    alt="Black tick icon"
+                  />
+                  <p>მხოლოდ რიცხვები</p>
+                </div>
+              </div>
+
+              <div class="al-postal-index">
+                <div class="al-input">
+                  <label for="al-postal-index-input">ფართობი</label>
+                  <input
+                    type="text"
+                    name="postal-index"
+                    id="al-postal-index-input"
+                  />
+                </div>
+                <div class="al-validation-message">
+                  <img
+                    src="/assets/icons/tick-black-icon.svg"
+                    alt="Black tick icon"
+                  />
+                  <p>მხოლოდ რიცხვები</p>
+                </div>
+              </div>
+            </div>
+            <div class="al-inputs">
+              <div class="al-area">
+                <div class="al-input">
+                  <label for="al-area-input">საძინებლების რაოდენობა *</label>
+                  <input type="text" name="area-input" id="al-area-input" />
+                </div>
+                <div class="al-validation-message">
+                  <img
+                    src="/assets/icons/tick-black-icon.svg"
+                    alt="Black tick icon"
+                  />
+                  <p>მხოლოდ რიცხვები</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="al-text-area">
+              <div class="al-description">
+                <label for="al-text-area">აღწერა *</label>
+                <textarea name="al-text-area" id="al-text-area"></textarea>
+              </div>
+              <div class="al-validation-message">
+                <img
+                  src="/assets/icons/tick-black-icon.svg"
+                  alt="Black tick icon"
+                />
+                <p>მინიმუმ ხუთი სიტყვა</p>
+              </div>
+            </div>
+
+            <div class="al-file">
+              <div class="al-upload-file">
+                <p>ატვირთეთ ფოტო *</p>
+                <div id="drop-zone" for="al-upload">
+                  <label for="al-upload">
+                    <img
+                      src="/assets/icons/plus-circle.svg"
+                      alt="plus circle"
+                    />
+                  </label>
+
+                  <input type="file" name="al-upload" id="al-upload" />
+                  <div id="preview-container" class="preview-file">
+                    <img
+                      id="trash-icon"
+                      src="/assets/icons/trash-icon.svg"
+                      alt="trash-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="al-agent al-section">
+          <p>აგენტი</p>
+          <div class="al-choose-agent">
+            <p for="al-add-agent">აირჩიე</p>
+            <div class="custom-select">
+              <div class="select-selected"></div>
+              <div id="agent-select-items" class="select-items">
+                <!-- <div>Option 1</div>
+                <div>Option 2</div>
+                <div>Option 3</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="al-buttons">
+          <a class="al-button-cancel" href="#">
+            <button type="button">გაუქმება</button>
+          </a>
+          <a class="al-button-submit" href="#">
+            <button type="submit">დაამატე ლისტინგი</button>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/AddListing.js"></script>
+  </body>
+</html>

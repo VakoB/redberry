@@ -13,9 +13,6 @@ html {
   font-family: "FiraGO";
 }
 
-body {
-}
-
 li {
   list-style: none;
 }
@@ -34,6 +31,75 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.custom-select {
+  position: relative; /* Set to relative to position child elements absolutely */
+  border: 1px solid #808a93;
+  background-color: #fff;
+  background-image: url("/assets/icons/dropdown-arrow-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px top 15px;
+  background-size: 12px;
+  border-radius: 6px;
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+  width: 384px;
+}
+
+.select-selected {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #808a93;
+  border-radius: 0 0 6px 6px;
+  width: 384px;
+  z-index: 3;
+  display: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.select-items div {
+  padding: 10px;
+  cursor: pointer;
+  border-top: 1px solid #808a93;
+}
+
+.select-items div:first-child {
+  border-top: none;
+}
+
+.select-activated {
+  border-radius: 6px 6px 0 0;
+}
+
+/* Optional: Add hover effect for options */
+.select-items div:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  font-family: FiraGO;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+}
+
+input {
+  font-family: FiraGO;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
 }
 
 /* header */
@@ -55,11 +121,12 @@ header > a {
 /* index.html */
 
 main {
-  margin-top: 77px;
   margin-inline: 167px;
+  position: relative;
 }
 
 .operations-bar {
+  margin-top: 77px;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -103,7 +170,6 @@ main {
 .operations button {
   border: none;
   background-color: transparent;
-  font-family: FiraGO;
   font-size: 16px;
   font-weight: 500;
   line-height: 19.2px;
@@ -598,3 +664,296 @@ main {
   line-height: 12px;
   text-align: left;
 }
+
+/* add-listing.html*/
+
+.al-title {
+  text-align: center;
+  margin-top: 62px;
+}
+
+.add-listing-form {
+  margin-top: 61px;
+  width: 790px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-bottom: 100px;
+}
+
+.al-trade-type {
+  width: 266px;
+}
+
+.al-trade-type > div > * {
+}
+
+.al-section > div > div {
+  margin-top: 20px;
+}
+
+.al-agent > div > div {
+  margin-top: 0;
+}
+
+.al-section > p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.54px;
+}
+
+.al-radio-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.al-radio-buttons > div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  gap: 5px;
+}
+
+.al-radio-buttons > div:nth-child(1) {
+  width: 134px;
+}
+
+/* radio buttons */
+
+input[type="radio"],
+input[type="radio"]:hover,
+input[type="radio"]:focus {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  position: relative;
+  border-color: black;
+}
+
+input[type="radio"]:checked::before {
+  content: "";
+  width: 45%;
+  height: 45%;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* end of radio buttons */
+
+.al-inputs,
+.al-dropdowns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.al-inputs > *,
+.al-dropdowns > * {
+  flex-grow: 1;
+}
+
+.al-input,
+.al-dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.al-input > label,
+.al-dropdown > p,
+.al-description > label,
+.al-upload-file > p,
+.al-choose-agent p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+.al-input,
+.al-dropdown,
+.al-description,
+.al-upload-file {
+  gap: 5px;
+}
+
+.al-input input,
+.al-input input:focus {
+  outline: none;
+  border: 1px solid #808a93;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.al-dropdown select,
+.al-dropdown select:focus {
+  outline: none;
+  border: 1px solid #808a93;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.al-dropdown option {
+  padding: 10px;
+}
+
+.al-validation-message {
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.8px;
+  text-align: left;
+  margin-top: 5px;
+  gap: 3px;
+}
+
+.al-area input {
+  width: 384px;
+}
+
+.al-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.al-description textarea,
+.al-description textarea:focus {
+  outline: none;
+  border: 1px solid #808a93;
+  border-radius: 6px;
+  padding: 10px;
+  min-height: 135px;
+  resize: none;
+}
+
+.al-upload-file {
+  display: flex;
+  flex-direction: column;
+}
+
+.al-upload-file input {
+  display: none;
+}
+
+.al-choose-agent {
+  display: flex;
+  flex-direction: column;
+  width: 384px;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.al-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+}
+
+.al-buttons > * {
+  padding: 10px 16px 10px 16px;
+  border-radius: 10px;
+  opacity: 0px;
+}
+
+.al-buttons button {
+  outline: none;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  text-align: center;
+}
+
+.al-buttons a {
+  height: 47px;
+  display: flex;
+  align-items: center;
+}
+
+.al-button-cancel {
+  border: 1px solid #f93b1d;
+  color: #f93b1d;
+  background-color: white;
+}
+
+.al-button-cancel button {
+  color: #f93b1d;
+}
+
+.al-button-submit {
+  background-color: #f93b1d;
+  border: none;
+}
+
+.al-button-submit button {
+  color: white;
+}
+
+.al-city > .al-dropdown {
+  visibility: hidden;
+}
+
+/* file */
+
+#drop-zone {
+  text-align: center;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/images/dashedborder.svg");
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.preview-file {
+  /* background-image: url('/assets/images/LOGO-02\ 3.svg'); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 92px;
+  height: 82px;
+  position: absolute;
+  border-radius: 4px;
+  z-index: 2;
+  display: none;
+}
+
+.preview-file > img {
+  position: absolute;
+  top: 75%;
+  left: 80%;
+  display: none;
+}
+
+.al-upload-file label {
+}
+
+.al-upload-file label > img {
+  z-index: 10;
+  display: block;
+  z-index: 100;
+
+}
+
+.al-upload-file img:hover {
+  cursor: pointer;
+}
+
+/* #drop-zone.active {
+  background: rgb(217, 217, 217);
+  border: 1px solid #808a93;
+} */
