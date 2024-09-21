@@ -11,6 +11,101 @@
     <title>Document</title>
   </head>
   <body>
+    <dialog class="modal" id="modal" method="dialog">
+      <div class="modal-form">
+        <h2 class="modal-title">აგენტის დამატება</h2>
+        <div class="modal-first-last">
+          <div class="modal-first-name">
+            <div class="al-input">
+              <label for="al-first-name-input">სახელი *</label>
+              <input type="text" name="first-name" id="al-first-name-input" />
+            </div>
+            <div id="modal-first-name-messages">
+              <div class="al-validation-message">
+                <img
+                  src="/assets/icons/tick-black-icon.svg"
+                  alt="Black tick icon"
+                />
+                <p>მინიმუმ ორი სიმბოლო</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-last-name">
+            <div class="al-input">
+              <label for="al-last-name-input">გვარი</label>
+              <input type="text" name="last-name" id="al-last-name-input" />
+            </div>
+            <div id="modal-last-name-messages">
+              <div class="al-validation-message">
+                <img
+                  src="/assets/icons/tick-black-icon.svg"
+                  alt="Black tick icon"
+                />
+                <p>მინიმუმ ორი სიმბოლო</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-mail-phone">
+          <div class="modal-mail">
+            <div class="al-input">
+              <label for="al-first-name-input">ელ-ფოსტა *</label>
+              <input type="text" name="first-name" id="al-first-name-input" />
+            </div>
+            <div id="modal-first-name-messages">
+              <div class="al-validation-message">
+                <img
+                  src="/assets/icons/tick-black-icon.svg"
+                  alt="Black tick icon"
+                />
+                <p>გამოიყენეთ @redberry.ge ფოსტა</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-last-name">
+            <div class="al-input">
+              <label for="al-last-name-input">ტელეფონის ნომერი</label>
+              <input type="text" name="last-name" id="al-last-name-input" />
+            </div>
+            <div id="modal-last-name-messages">
+              <div class="al-validation-message">
+                <img
+                  src="/assets/icons/tick-black-icon.svg"
+                  alt="Black tick icon"
+                />
+                <p>მხოლოდ რიცხვები</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-file-upload">
+          <p>ატვირთეთ ფოტო *</p>
+          <div id="modal-drop-zone">
+            <label for="modal-upload">
+              <img src="/assets/icons/plus-circle.svg" alt="plus circle" />
+            </label>
+
+            <input type="file" name="al-upload" id="modal-upload" />
+            <div class="preview-file">
+              <img
+                class="trash-icon"
+                src="/assets/icons/trash-icon.svg"
+                alt="trash-icon"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-buttons">
+          <button class="modal-cancel-button" type="button">გაუქმება</button>
+          <button class="modal-submit-button" type="submit">
+            დაამატე აგენტი
+          </button>
+        </div>
+      </div>
+    </dialog>
+
     <header>
       <a href="/pages/add-listing.html">
         <img src="/assets/images/LOGO-02 3.svg" alt="Redberry logo" />
@@ -46,12 +141,14 @@
                   <label for="al-address-input">მისამართი *</label>
                   <input type="text" name="address" id="al-address-input" />
                 </div>
-                <div class="al-validation-message">
-                  <img
-                    src="/assets/icons/tick-black-icon.svg"
-                    alt="Black tick icon"
-                  />
-                  <p>მინიმუმ ორი სიმბოლო</p>
+                <div id="al-address-messages">
+                  <div class="al-validation-message">
+                    <img
+                      src="/assets/icons/tick-black-icon.svg"
+                      alt="Black tick icon"
+                    />
+                    <p>მინიმუმ ორი სიმბოლო</p>
+                  </div>
                 </div>
               </div>
 
@@ -64,12 +161,14 @@
                     id="al-postal-index-input"
                   />
                 </div>
-                <div class="al-validation-message">
-                  <img
-                    src="/assets/icons/tick-black-icon.svg"
-                    alt="Black tick icon"
-                  />
-                  <p>მხოლოდ რიცხვები</p>
+                <div id="al-postal-index-messages">
+                  <div class="al-validation-message">
+                    <img
+                      src="/assets/icons/tick-black-icon.svg"
+                      alt="Black tick icon"
+                    />
+                    <p>მხოლოდ რიცხვები</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -86,6 +185,9 @@
                       <div>Option 2</div>
                       <div>Option 3</div> -->
                     </div>
+                  </div>
+                  <div id="al-region-messages">
+                    
                   </div>
                 </div>
               </div>
@@ -113,48 +215,50 @@
             <div class="al-inputs">
               <div class="al-price">
                 <div class="al-input">
-                  <label for="al-address-input">ფასი</label>
-                  <input type="text" name="address" id="al-address-input" />
+                  <label for="al-price-input">ფასი</label>
+                  <input type="text" name="address" id="al-price-input" />
                 </div>
-                <div class="al-validation-message">
-                  <img
-                    src="/assets/icons/tick-black-icon.svg"
-                    alt="Black tick icon"
-                  />
-                  <p>მხოლოდ რიცხვები</p>
+                <div id="al-price-messages">
+                  <div class="al-validation-message">
+                    <img
+                      src="/assets/icons/tick-black-icon.svg"
+                      alt="Black tick icon"
+                    />
+                    <p>მხოლოდ რიცხვები</p>
+                  </div>
                 </div>
               </div>
 
-              <div class="al-postal-index">
+              <div class="al-area">
                 <div class="al-input">
-                  <label for="al-postal-index-input">ფართობი</label>
-                  <input
-                    type="text"
-                    name="postal-index"
-                    id="al-postal-index-input"
-                  />
+                  <label for="al-area-input">ფართობი</label>
+                  <input type="text" name="postal-index" id="al-area-input" />
                 </div>
-                <div class="al-validation-message">
-                  <img
-                    src="/assets/icons/tick-black-icon.svg"
-                    alt="Black tick icon"
-                  />
-                  <p>მხოლოდ რიცხვები</p>
+                <div id="al-area-messages">
+                  <div class="al-validation-message">
+                    <img
+                      src="/assets/icons/tick-black-icon.svg"
+                      alt="Black tick icon"
+                    />
+                    <p>მხოლოდ რიცხვები</p>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="al-inputs">
-              <div class="al-area">
+              <div class="al-rooms">
                 <div class="al-input">
-                  <label for="al-area-input">საძინებლების რაოდენობა *</label>
-                  <input type="text" name="area-input" id="al-area-input" />
+                  <label for="al-rooms-input">საძინებლების რაოდენობა *</label>
+                  <input type="text" name="area-input" id="al-rooms-input" />
                 </div>
-                <div class="al-validation-message">
-                  <img
-                    src="/assets/icons/tick-black-icon.svg"
-                    alt="Black tick icon"
-                  />
-                  <p>მხოლოდ რიცხვები</p>
+                <div id="al-rooms-messages">
+                  <div class="al-validation-message">
+                    <img
+                      src="/assets/icons/tick-black-icon.svg"
+                      alt="Black tick icon"
+                    />
+                    <p>მხოლოდ მთელი რიცხვები</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -162,14 +266,19 @@
             <div class="al-text-area">
               <div class="al-description">
                 <label for="al-text-area">აღწერა *</label>
-                <textarea name="al-text-area" id="al-text-area"></textarea>
+                <textarea
+                  name="al-text-area-input"
+                  id="al-text-area"
+                ></textarea>
               </div>
-              <div class="al-validation-message">
-                <img
-                  src="/assets/icons/tick-black-icon.svg"
-                  alt="Black tick icon"
-                />
-                <p>მინიმუმ ხუთი სიტყვა</p>
+              <div id="al-description-messages">
+                <div class="al-validation-message">
+                  <img
+                    src="/assets/icons/tick-black-icon.svg"
+                    alt="Black tick icon"
+                  />
+                  <p>მინიმუმ ხუთი სიტყვა</p>
+                </div>
               </div>
             </div>
 
@@ -194,6 +303,15 @@
                   </div>
                 </div>
               </div>
+              <div id="al-file-messages">
+                <div class="al-validation-message">
+                  <img
+                    src="/assets/icons/tick-red-icon.svg"
+                    alt="red tick icon"
+                  />
+                  <p>ფაილი უნდა იყოს 1mb-ზე პატარა ზომის სურათი</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -205,21 +323,20 @@
             <div class="custom-select">
               <div class="select-selected"></div>
               <div id="agent-select-items" class="select-items">
-                <!-- <div>Option 1</div>
-                <div>Option 2</div>
-                <div>Option 3</div> -->
+                <div id="add-agent-option">
+                  <img src="/assets/icons/plus-circle.svg" alt="" />
+                  <p>დაამატე აგენტი</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="al-buttons">
-          <a class="al-button-cancel" href="#">
-            <button type="button">გაუქმება</button>
-          </a>
-          <a class="al-button-submit" href="#">
-            <button type="submit">დაამატე ლისტინგი</button>
-          </a>
+          <button class="al-button-cancel" type="button">გაუქმება</button>
+          <button class="al-button-submit" type="submit">
+            დაამატე ლისტინგი
+          </button>
         </div>
       </div>
     </main>

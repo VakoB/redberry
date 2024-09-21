@@ -71,6 +71,9 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 10px;
   cursor: pointer;
   border-top: 1px solid #808a93;
+  height: 42px;
+  display: flex;
+  align-items: center;
 }
 
 .select-items div:first-child {
@@ -199,6 +202,14 @@ main {
 
 .add-agent button {
   color: #f93b1d;
+}
+
+#add-agent-option p {
+  margin-left: 5px;
+}
+
+.add-agent-option img {
+  width: 24px;
 }
 
 .real-estate-container {
@@ -774,7 +785,7 @@ input[type="radio"]:checked::before {
 .al-dropdown > p,
 .al-description > label,
 .al-upload-file > p,
-.al-choose-agent p {
+.al-choose-agent > p {
   font-size: 14px;
   font-weight: 500;
   line-height: 16.8px;
@@ -817,7 +828,14 @@ input[type="radio"]:checked::before {
   gap: 3px;
 }
 
-.al-area input {
+/* .al-validation-message img {
+  filter: brightness(0) saturate(100%) invert(25%) sepia(100%) saturate(700%) hue-rotate(130deg);
+} */
+
+.al-area input,
+.al-rooms input,
+.al-price input,
+.custom-select {
   width: 384px;
 }
 
@@ -860,23 +878,15 @@ input[type="radio"]:checked::before {
   align-items: center;
 }
 
+.al-file #al-file-messages {
+  display: none;
+  color: red;
+}
+
 .al-buttons > * {
   padding: 10px 16px 10px 16px;
   border-radius: 10px;
   opacity: 0px;
-}
-
-.al-buttons button {
-  outline: none;
-  border: none;
-  background: transparent;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 19.2px;
-  text-align: center;
-}
-
-.al-buttons a {
   height: 47px;
   display: flex;
   align-items: center;
@@ -888,20 +898,13 @@ input[type="radio"]:checked::before {
   background-color: white;
 }
 
-.al-button-cancel button {
-  color: #f93b1d;
-}
-
 .al-button-submit {
+  color: white;
   background-color: #f93b1d;
   border: none;
 }
 
-.al-button-submit button {
-  color: white;
-}
-
-.al-city > .al-dropdown {
+.al-city {
   visibility: hidden;
 }
 
@@ -946,14 +949,123 @@ input[type="radio"]:checked::before {
   z-index: 10;
   display: block;
   z-index: 100;
-
 }
 
 .al-upload-file img:hover {
   cursor: pointer;
 }
 
-/* #drop-zone.active {
-  background: rgb(217, 217, 217);
-  border: 1px solid #808a93;
-} */
+/* modal */
+
+.modal {
+  position: fixed;
+  width: 1008px;
+  height: 784px;
+  z-index: 50;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px 0px #00000014;
+  justify-content: center;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  justify-content: center;
+  padding-inline: 105px;
+}
+
+.modal-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.4px;
+  text-align: center;
+  margin-top: 87px;
+}
+
+.modal::backdrop {
+  background: #02152657;
+}
+
+.modal-first-last {
+  display: flex;
+  margin-top: 61px;
+  gap: 30px;
+}
+
+.modal-first-last input,
+.modal-mail-phone input {
+  width: 384px;
+}
+
+.modal-mail-phone {
+  display: flex;
+  gap: 30px;
+}
+
+#modal-drop-zone {
+  text-align: center;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/images/dashedborder.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-top: 5px;
+}
+
+#modal-drop-zone input {
+  display: none;
+}
+
+#modal-drop-zone label {
+  cursor: pointer;
+}
+
+.modal-file-upload {
+  width: 100%;
+}
+
+.modal-file-upload > p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.8px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.modal-buttons button {
+  padding: 10px 16px 10px 16px;
+  border-radius: 10px;
+  opacity: 0px;
+  height: 47px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-cancel-button {
+  border: 1px solid #f93b1d;
+  color: #f93b1d;
+  background-color: white;
+}
+
+.modal-submit-button {
+  color: white;
+  background-color: #f93b1d;
+  border: none;
+}
